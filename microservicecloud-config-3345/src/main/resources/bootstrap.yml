@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      name: microservicecloud-client-config
+      profile: dev
+      label: master
+      uri: http://localhost:3344/
+  config:
+    location:  D:\git\microservice\microservicecloud-config\
+
+

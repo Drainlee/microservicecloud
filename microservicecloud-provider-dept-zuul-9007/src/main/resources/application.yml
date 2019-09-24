@@ -1,0 +1,25 @@
+server:
+  port: 9007
+
+
+zuul:
+  routes:
+    provider.serviceId: MICROSERVICECLOUD-DEPT
+    provider.path: /provider/**
+  prefix: /lyz
+  ignored-services: "*"
+
+
+spring:
+  application:
+    name: microservicecloud-gateway-zuul
+eureka:
+  instance:
+    instance-id: zuulGateway-9007
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+
+

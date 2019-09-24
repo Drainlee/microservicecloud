@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: microservicecloud-client-config
+      profile: dev
+      label: master
+      uri: http://localhost:3344/  #去寻找3344服务，通过该服务去git上去找相关仓库文件
